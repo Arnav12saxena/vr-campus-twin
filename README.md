@@ -58,7 +58,19 @@ vr-campus-twin/
         └── caiml-tour-overview.jpg
 ```
 
-The two screenshot files listed above are the intended filenames; upload them to `assets/screenshots/` to complete that part of the structure.
+## Tour screenshots
+
+### CAIML — Discovery Building
+
+![CAIML Discovery Building virtual tour overview](assets/screenshots/caiml-tour-overview.jpg)
+
+*The opening view of the CAIML indoor virtual tour.*
+
+### SKUAST-K Campus
+
+![SKUAST-K campus virtual tour overview](assets/screenshots/campus-tour-overview.jpg)
+
+*The opening view of the outdoor campus virtual tour.*
 
 ## Project documentation
 

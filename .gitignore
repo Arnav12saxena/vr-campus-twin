@@ -1,0 +1,25 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Credentials and local secrets
+.env
+.env.*
+!.env.example
+*credentials*
+*secrets*
+
+# Large camera source files: keep originals outside Git unless approved
+*.insp
+*.insv
+*.mp4
+*.mov

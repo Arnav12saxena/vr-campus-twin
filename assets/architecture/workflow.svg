@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">VR Campus Twin project workflow</title>
+  <desc id="desc">The workflow from 360-degree image capture through image processing, panorama compression, Panoee tour creation, publishing, and website embedding.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 Z" fill="#475569"/></marker>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#12345a"/><stop offset="100%" stop-color="#2563a6"/></linearGradient>
+  </defs>
+  <rect width="1400" height="760" rx="28" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1400" height="126" rx="28" fill="url(#header)"/>
+  <rect x="0" y="98" width="1400" height="28" fill="url(#header)"/>
+  <text x="700" y="54" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">VR Campus Twin</text>
+  <text x="700" y="88" font-family="Arial, Helvetica, sans-serif" font-size="18" text-anchor="middle" fill="#e2e8f0">360° virtual-tour production workflow</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="55" y="190" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="92" cy="229" r="20" fill="#dbeafe"/><text x="92" y="236" font-size="19" font-weight="700" text-anchor="middle" fill="#1d4ed8">1</text>
+    <text x="125" y="236" font-size="22" font-weight="700" fill="#0f172a">Capture 360° imagery</text>
+    <text x="82" y="278" font-size="17" fill="#334155">Insta360 X4 camera</text>
+    <text x="82" y="306" font-size="16" fill="#475569">Capture scenes around campus</text>
+    <text x="82" y="330" font-size="16" fill="#475569">and inside the CAIML building.</text>
+
+    <rect x="515" y="190" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="552" cy="229" r="20" fill="#dbeafe"/><text x="552" y="236" font-size="19" font-weight="700" text-anchor="middle" fill="#1d4ed8">2</text>
+    <text x="585" y="236" font-size="22" font-weight="700" fill="#0f172a">Process panoramas</text>
+    <text x="542" y="278" font-size="17" fill="#334155">Insta360 Studio</text>
+    <text x="542" y="306" font-size="16" fill="#475569">Process .insp source files and</text>
+    <text x="542" y="330" font-size="16" fill="#475569">export equirectangular JPGs.</text>
+
+    <rect x="975" y="190" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="1012" cy="229" r="20" fill="#dbeafe"/><text x="1012" y="236" font-size="19" font-weight="700" text-anchor="middle" fill="#1d4ed8">3</text>
+    <text x="1045" y="236" font-size="22" font-weight="700" fill="#0f172a">Optimize image size</text>
+    <text x="1002" y="278" font-size="17" fill="#334155">Prepare for web delivery</text>
+    <text x="1002" y="306" font-size="16" fill="#475569">Resize exports from 12000×6000</text>
+    <text x="1002" y="330" font-size="16" fill="#475569">to 8000×4000 pixels.</text>
+
+    <path d="M425 275 H505" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M885 275 H965" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="975" y="445" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="1012" cy="484" r="20" fill="#dcfce7"/><text x="1012" y="491" font-size="19" font-weight="700" text-anchor="middle" fill="#166534">4</text>
+    <text x="1045" y="491" font-size="22" font-weight="700" fill="#0f172a">Build interactive tours</text>
+    <text x="1002" y="533" font-size="17" fill="#334155">Panoee</text>
+    <text x="1002" y="561" font-size="16" fill="#475569">Create scenes, hotspots, and</text>
+    <text x="1002" y="585" font-size="16" fill="#475569">navigation for both locations.</text>
+
+    <rect x="515" y="445" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="552" cy="484" r="20" fill="#dcfce7"/><text x="552" y="491" font-size="19" font-weight="700" text-anchor="middle" fill="#166534">5</text>
+    <text x="585" y="491" font-size="22" font-weight="700" fill="#0f172a">Publish tours</text>
+    <text x="542" y="533" font-size="17" fill="#334155">Panoee hosting</text>
+    <text x="542" y="561" font-size="16" fill="#475569">Publish two separate tours:</text>
+    <text x="542" y="585" font-size="16" fill="#475569">campus (230) and CAIML (35) scenes.</text>
+
+    <rect x="55" y="445" width="370" height="170" rx="18" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <circle cx="92" cy="484" r="20" fill="#dcfce7"/><text x="92" y="491" font-size="19" font-weight="700" text-anchor="middle" fill="#166534">6</text>
+    <text x="125" y="491" font-size="22" font-weight="700" fill="#0f172a">Embed on websites</text>
+    <text x="82" y="533" font-size="17" fill="#334155">HTML iframe snippets</text>
+    <text x="82" y="561" font-size="16" fill="#475569">Fullscreen, VR and gyroscope</text>
+    <text x="82" y="585" font-size="16" fill="#475569">options; website integration pending.</text>
+
+    <path d="M1160 360 V435" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M975 530 H895" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+    <path d="M515 530 H435" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  </g>
+  <text x="700" y="690" font-family="Arial, Helvetica, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">Workflow reflects the project’s actual tools; Panoee is a third-party tour-building and hosting platform.</text>
+  <text x="700" y="718" font-family="Arial, Helvetica, sans-serif" font-size="15" text-anchor="middle" fill="#64748b">CAIML · SKUAST-Kashmir · Project completion: 18 August 2026</text>
+</svg>

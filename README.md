@@ -1,37 +1,58 @@
-# Development of 360° Virtual Tours for SKUAST-K Campus and CAIML
+# VR Campus Twin
 
-A university project documenting two web-based 360° virtual tours created with panoramic imagery captured using an Insta360 X4, processed in Insta360 Studio, and assembled and hosted using Panoee.
+### Development of 360° Virtual Tours for SKUAST-K Campus and CAIML
 
-> **Scope:** Panoee is the third-party virtual-tour builder and hosting platform used in this project. This repository documents the team's capture, image-processing, tour-creation, and embedding work; it does not claim that the team developed Panoee itself.
+An academic project to make the **SKUAST-Kashmir campus** and the **Centre for Artificial Intelligence and Machine Learning (CAIML)** explorable through interactive 360° virtual tours.
 
-## Live tours
+> **Project scope:** The team captured and processed 360° imagery and created the tours using Insta360 Studio and Panoee. Panoee is a third-party tour authoring and hosting platform; it was not developed by this project team.
 
-| Tour | Coverage | Scenes | Link |
-|---|---|---:|---|
-| SKUAST-K Campus | Outdoor campus | 230 | [Open campus tour](https://tour.panoee.net/6a7a0bea123af5701c233152) |
-| CAIML — Discovery Building | Indoor department building | 35 | [Open CAIML tour](https://tour.panoee.net/6a32d4bdd0e5ab828601d2fb) |
+## Explore the tours
 
-Both tours are hosted separately on Panoee. The supplied iframe snippets are in [embeds/](embeds/). Final integration into the official university websites is to be carried out by the relevant website administrators.
+| Virtual tour | Coverage | Scenes |
+|---|---|---:|
+| [SKUAST-K Campus](https://tour.panoee.net/6a7a0bea123af5701c233152) | Outdoor campus | 230 |
+| [CAIML — Discovery Building](https://tour.panoee.net/6a32d4bdd0e5ab828601d2fb) | Indoor building | 35 |
 
-## Project objectives
+Both tours are hosted separately on Panoee and include interactive scene navigation and VR support. Embedding them into the official university websites is a separate step for the relevant website administrators.
 
-- Create remotely accessible 360° representations of the SKUAST-K campus and CAIML department.
-- Capture panoramic imagery and prepare it for web delivery.
-- Create two separate interactive tours with scene-to-scene navigation and VR mode.
-- Document the workflow, published outputs, and embedding snippets for academic review and future maintenance.
+## Tour previews
 
-## Tools used
+### SKUAST-K Campus
 
-| Tool | Purpose |
+![Preview of the SKUAST-K campus virtual tour](assets/screenshots/campus-tour-overview.jpg)
+
+[**Open the campus virtual tour →**](https://tour.panoee.net/6a7a0bea123af5701c233152)
+
+### CAIML — Discovery Building
+
+![Preview of the CAIML Discovery Building virtual tour](assets/screenshots/caiml-tour-overview.jpg)
+
+[**Open the CAIML virtual tour →**](https://tour.panoee.net/6a32d4bdd0e5ab828601d2fb)
+
+## Project workflow
+
+![VR Campus Twin workflow from image capture to website embedding](assets/architecture/workflow.svg)
+
+1. **Capture:** Take 360° photographs using the Insta360 X4.
+2. **Process:** Process the source files in Insta360 Studio and export equirectangular JPG panoramas.
+3. **Optimize:** Reduce panorama resolution for web delivery.
+4. **Build:** Import panoramas into Panoee and configure scenes, hotspots, and navigation.
+5. **Publish:** Publish the campus and CAIML tours separately.
+6. **Prepare for integration:** Use the supplied iframe snippets when embedding the tours on approved websites.
+
+## Tools and technologies
+
+| Tool | Use in this project |
 |---|---|
-| Insta360 X4 | Capture 360° imagery |
-| Insta360 Studio | Process `.insp` files and export panoramic JPG images |
-| Panoee | Build tours, configure navigation/hotspots, host and embed the tours |
-| GitHub | Version project documentation and store workflow and embed snippets |
+| **Insta360 X4** | Capture 360° imagery |
+| **Insta360 Studio** | Process `.insp` files and export panoramic JPG images |
+| **Panoee** | Build, configure, publish, and host the interactive tours |
+| **HTML iframe** | Provide website-embedding snippets for each tour |
+| **GitHub** | Maintain project documentation, workflow diagram, screenshots, and embed snippets |
 
 ## Image preparation
 
-According to the project report, the original panoramic exports were 12000 × 6000 pixels and were compressed to 8000 × 4000 pixels. The report describes an original dataset of approximately 6 GB and a Panoee free-tier storage allowance of 3 GB.
+The project report records an original panorama export resolution of **12000 × 6000 pixels**, reduced to **8000 × 4000 pixels** for the published tours. The report describes an original dataset of approximately **6 GB** and a Panoee free-tier storage allowance of **3 GB** at the time of the project.
 
 ## Repository structure
 
@@ -39,78 +60,67 @@ According to the project report, the original panoramic exports were 12000 × 60
 vr-campus-twin/
 ├── README.md
 ├── .gitignore
+├── assets/
+│   ├── architecture/
+│   │   └── workflow.svg
+│   └── screenshots/
+│       ├── campus-tour-overview.jpg
+│       └── caiml-tour-overview.jpg
 ├── docs/
 │   ├── project-report.md
 │   ├── methodology.md
 │   └── team-and-credits.md
-├── tours/
-│   ├── campus-tour.md
-│   └── caiml-tour.md
 ├── embeds/
 │   ├── README.md
 │   ├── campus-embed.html
 │   └── caiml-embed.html
-└── assets/
-    ├── architecture/
-    │   └── workflow.svg
-    └── screenshots/
-        ├── campus-tour-overview.jpg
-        └── caiml-tour-overview.jpg
+└── tours/
+    ├── campus-tour.md
+    └── caiml-tour.md
 ```
 
-## Tour screenshots
-
-### CAIML — Discovery Building
-
-![CAIML Discovery Building virtual tour overview](assets/screenshots/caiml-tour-overview.jpg)
-
-*The opening view of the CAIML indoor virtual tour.*
-
-### SKUAST-K Campus
-
-![SKUAST-K campus virtual tour overview](assets/screenshots/campus-tour-overview.jpg)
-
-*The opening view of the outdoor campus virtual tour.*
-
-## Project documentation
+## Documentation
 
 - [Project report (Markdown)](docs/project-report.md)
-- [Methodology and workflow](docs/methodology.md)
+- [Methodology and workflow notes](docs/methodology.md)
 - [Team and credits](docs/team-and-credits.md)
-- [Campus tour details](tours/campus-tour.md)
+- [SKUAST-K campus tour details](tours/campus-tour.md)
 - [CAIML tour details](tours/caiml-tour.md)
-- [Workflow diagram (SVG)](assets/architecture/workflow.svg)
-- [Embed snippets and usage notes](embeds/README.md)
+- [Campus embed snippet](embeds/campus-embed.html)
+- [CAIML embed snippet](embeds/caiml-embed.html)
+- [Embed instructions](embeds/README.md)
+- [Workflow diagram](assets/architecture/workflow.svg)
 
-## Team
+## Team and academic details
 
-| Name | Roll number | Role |
+| Team member | Roll number | Role |
 |---|---|---|
-| Arnav Saxena | BTAI-2024-26 | Team Leader |
-| Mir Faiq | BTAI-2024-11 | Member |
-| Mohammad Fouzan | BTAI-2024-23 | Member |
+| **Arnav Saxena** | BTAI-2024-26 | Team Leader |
+| **Mir Faiq** | BTAI-2024-11 | Team Member |
+| **Mohammad Fouzan** | BTAI-2024-23 | Team Member |
 
-**Centre:** Centre for Artificial Intelligence and Machine Learning (CAIML)  
-**Programme:** B.Tech AI (2024 batch)  
-**Institution:** SKUAST-Kashmir  
-**Supervisors:** Dr. Showkat Rasool and Mr. Mohammad Saqib Dar  
-**Project duration:** April 2026 – August 2026 (approximately four months)  
-**Completion date:** 18 August 2026
+- **Programme:** B.Tech Artificial Intelligence (2024 batch)
+- **Centre:** Centre for Artificial Intelligence and Machine Learning (CAIML)
+- **Institution:** Sher-e-Kashmir University of Agricultural Sciences and Technology of Kashmir (SKUAST-K)
+- **Supervisors:** Dr. Showkat Rasool and Mr. Mohammad Saqib Dar
+- **Project duration:** April–August 2026 (approximately four months)
+- **Completion date:** 18 August 2026
+- **Project context:** Departmental initiative; not the team's final B.Tech project.
 
 ## Future scope
 
-- Integrate both tours into a unified campus digital twin.
-- Expand CAIML coverage to include outdoor surroundings.
-- Add informational overlays for key locations.
+- Bring the two tours together as part of a broader campus digital twin.
+- Extend CAIML coverage to its outdoor surroundings.
+- Add contextual information overlays for important locations.
 - Explore a more comprehensive VR-based campus experience.
 
-## Notes for maintainers
+## Notes
 
-- Test both tour URLs periodically.
-- Obtain university approval before embedding tours on official websites or publishing images of restricted areas.
-- Do not commit passwords, access tokens, private Panoee settings, or the full high-resolution panorama dataset.
-- Test the HTML snippets on the intended website before production use. Some content-management systems accept only iframe markup rather than a full HTML document.
+- The full high-resolution panorama dataset is intentionally not stored in this repository.
+- Obtain the necessary university permissions before embedding tours on official websites or publishing images of restricted areas.
+- Browser support and permissions may affect gyroscope/device-motion behavior in embedded tours.
+- The published tours are hosted by Panoee; tour availability and platform features depend on that service.
 
-## Acknowledgement
+## Acknowledgements
 
-The project was undertaken under the guidance of Dr. Showkat Rasool and Mr. Mohammad Saqib Dar at CAIML, SKUAST-Kashmir.
+We thank **Dr. Showkat Rasool** and **Mr. Mohammad Saqib Dar** for their supervision and guidance throughout this project.
